@@ -3,7 +3,7 @@
 ###################################
 ### Global values
 ###################################
-VERSION_MANAGER='1.4.3f'
+VERSION_MANAGER='1.4.4'
 VERSION=v2.4.11
 
 DIR_REVERSE_PROXY="/usr/local/reverse_proxy/"
@@ -2960,7 +2960,7 @@ log_clear() {
 ### Main function
 ###################################
 main() {
-  log_entry
+  #log_entry
   read_defaults_from_file
   parse_args "$@" || show_help
   [[ ${args[skip-check]} == "false" ]] && check_root
@@ -3071,7 +3071,7 @@ main() {
     info " $(text 85) "
     read -r dummy
   done
-  log_clear
+  #log_clear
 }
 
 main "$@"
